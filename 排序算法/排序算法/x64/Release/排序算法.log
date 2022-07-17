@@ -1,0 +1,11 @@
+﻿  test.c
+D:\codes\code_c\排序算法\排序算法\test.c(51,2): warning C4013: “QuickSort3”未定义；假设外部返回 int
+D:\codes\code_c\排序算法\排序算法\test.c(75,2): warning C4013: “MergeSort”未定义；假设外部返回 int
+D:\codes\code_c\排序算法\排序算法\test.c(82,8): warning C4013: “time”未定义；假设外部返回 int
+D:\codes\code_c\排序算法\排序算法\test.c(105,15): warning C4013: “clock”未定义；假设外部返回 int
+  正在生成代码
+  5 of 20 functions (25.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  排序算法.vcxproj -> D:\codes\code_c\排序算法\x64\Release\排序算法.exe

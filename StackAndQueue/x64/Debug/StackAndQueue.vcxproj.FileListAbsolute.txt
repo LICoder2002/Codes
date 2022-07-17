@@ -1,0 +1,2 @@
+D:\code\code_c\StackAndQueue\x64\Debug\StackAndQueue.exe
+D:\codes\code_c\StackAndQueue\x64\Debug\StackAndQueue.exe
