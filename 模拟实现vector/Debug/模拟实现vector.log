@@ -1,0 +1,11 @@
+﻿  test.cpp
+D:\codes\code_Cpp\模拟实现vector\test.cpp(36,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(43,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(50,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(68,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(78,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(97,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(114,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(129,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\codes\code_Cpp\模拟实现vector\test.cpp(138,20): warning C4018: “<”: 有符号/无符号不匹配
+  模拟实现vector.vcxproj -> D:\codes\code_Cpp\模拟实现vector\Debug\模拟实现vector.exe
