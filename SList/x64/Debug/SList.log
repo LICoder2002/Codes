@@ -1,0 +1,3 @@
+﻿  test.c
+D:\code\code_c\SList\test.c(33,21): warning C4020: “SListErase”: 实参太多
+  SList.vcxproj -> D:\code\code_c\SList\x64\Debug\SList.exe
