@@ -191,17 +191,63 @@ struct Stu
 //	return 0;
 //}
 
+//int main()
+//{
+//	struct Stu s = { "张三", 20, 99.5 };
+//	FILE* pf = fopen("data.txt", "r");
+//	assert(pf);
+//	
+//	//读格式化的数据
+//	fscanf(pf, "%s %d %lf", s.name, &s.age, &s.d);
+//	//printf("%s %d %lf\n", s.name, s.age, s.d);
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	struct Stu s[2] = { {"张三", 20, 99.5},{"李四",21,98.5} };
+//	FILE* pf = fopen("data.txt", "wb");
+//	assert(pf);
+//	
+//	//按照二进制的方式写文件
+//	fwrite(&s, sizeof(struct Stu), 2, pf);
+//
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+//
+//int main()
+//{
+//	struct Stu s[2] = {0};
+//	FILE* pf = fopen("data.txt", "rb");
+//	assert(pf);
+//
+//	//按照二进制的方式读文件
+//	fread(s, sizeof(struct Stu), 2, pf);
+//	printf("%s %d %lf\n", s[0].name, s[0].age, s[0].d);
+//	printf("%s %d %lf\n", s[1].name, s[1].age, s[1].d);
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+
 int main()
 {
 	struct Stu s = { "张三", 20, 99.5 };
-	FILE* pf = fopen("data.txt", "r");
-	assert(pf);
-	
-	//读格式化的数据
-	fscanf(pf, "%s %d %lf", s.name, &s.age, &s.d);
-	//printf("%s %d %lf\n", s.name, s.age, s.d);
+	struct Stu temp = { 0 };
 
-	fclose(pf);
-	pf = NULL;
+	char buff[100] = { 0 };
+	sprintf(buff, "%s %d %lf", s.name, s.age, s.d);
+	printf("%s\n", buff);
+
+	sscanf(buff, "%s %d %lf", temp.name, &temp.age, &temp.d);
+	printf("%s %d %lf\n", temp.name, temp.age, temp.d);
 	return 0;
 }
