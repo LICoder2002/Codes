@@ -3,7 +3,7 @@
 void Test1()
 {
 	cout << "Test1(): ·ÇµÝ¹é" << endl;
-	BSTree<int> t;
+	key::BSTree<int> t;
 	int a[] = { 8, 3, 1, 10, 6, 4, 7, 14, 13 };
 	for (auto e : a)
 	{
@@ -28,7 +28,7 @@ void Test1()
 void Test2()
 {
 	cout << "Test2(): µÝ¹é" << endl;
-	BSTree<int> t;
+	key::BSTree<int> t;
 	int a[] = { 8, 3, 1, 10, 6, 4, 7, 14, 13 };
 	for (auto e : a)
 	{
@@ -54,6 +54,9 @@ int main()
 {
 	//Test1();
 	Test2();
+
+	//key_value::TestBSTree1();
+	key_value::TestBSTree2();
 
 	system("pause");
 	return 0;
