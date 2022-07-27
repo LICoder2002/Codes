@@ -502,6 +502,7 @@ namespace key_value
 			else
 			{
 				Node* del = root;
+				
 				// É¾³ý
 				if (root->_left == nullptr)
 				{

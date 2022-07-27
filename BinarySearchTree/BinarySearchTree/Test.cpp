@@ -55,7 +55,7 @@ int main()
 	//Test1();
 	Test2();
 
-	//key_value::TestBSTree1();
+	key_value::TestBSTree1();
 	key_value::TestBSTree2();
 
 	system("pause");
