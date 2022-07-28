@@ -13,52 +13,52 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
  
- // class Solution {
- // public:
+  class Solution1 {
+  public:
 
- //     bool IsInSubTree(TreeNode* root, TreeNode* x)
- //     {
- //         if(root==nullptr)
- //             return false;
- //         if(root == x)
- //             return true;
+      bool IsInSubTree(TreeNode* root, TreeNode* x)
+      {
+          if(root==nullptr)
+              return false;
+          if(root == x)
+              return true;
 
- //         return IsInSubTree(root->left, x) || IsInSubTree(root->right, x);
- //     }
+          return IsInSubTree(root->left, x) || IsInSubTree(root->right, x);
+      }
 
- //     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
- //         if(root==nullptr)
- //             return root;
- //         if(p == root || q == root)
- //             return root;
+      TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+          if(root==nullptr)
+              return root;
+          if(p == root || q == root)
+              return root;
 
- //         bool pInLeft = IsInSubTree(root->left, p);
- //         bool pInRight = !pInLeft;
+          bool pInLeft = IsInSubTree(root->left, p);
+          bool pInRight = !pInLeft;
 
- //         bool qInLeft = IsInSubTree(root->left, q);
- //         bool qInRight = !qInLeft;
+          bool qInLeft = IsInSubTree(root->left, q);
+          bool qInRight = !qInLeft;
 
- //         if((pInLeft && qInRight) || (qInLeft && pInRight))
- //         {
- //             return root;
- //         }
- //         else if(pInLeft && qInLeft)
- //         {
- //             return lowestCommonAncestor(root->left, p, q);
- //         }
- //         else if(pInRight && qInRight)
- //         {
- //             return lowestCommonAncestor(root->right, p, q);
- //         }
- //         else
- //         {
- //             return nullptr;
- //         }
- //     }
- // };
+          if((pInLeft && qInRight) || (qInLeft && pInRight))
+          {
+              return root;
+          }
+          else if(pInLeft && qInLeft)
+          {
+              return lowestCommonAncestor(root->left, p, q);
+          }
+          else if(pInRight && qInRight)
+          {
+              return lowestCommonAncestor(root->right, p, q);
+          }
+          else
+          {
+              return nullptr;
+          }
+      }
+  };
 
 
-class Solution {
+class Solution2 {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q)
     {
@@ -91,4 +91,61 @@ public:
         }
 
     }
+};
+
+#include<vector>
+#include<stack>
+using std::stack;
+using std::vector;
+
+class Solution3 {
+public:
+    bool findPath(TreeNode* root, TreeNode* x, stack<TreeNode*, vector<TreeNode*>>& path)
+    {
+        if (root == nullptr)
+            return false;
+
+        path.push(root);
+
+        if (root == x)
+            return true;
+
+        if (findPath(root->left, x, path))
+            return true;
+
+        if (findPath(root->right, x, path))
+            return true;
+
+        path.pop();
+        return false;
+
+    }
+
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q)
+    {
+        stack<TreeNode*, vector<TreeNode*>> pPath, qPath;
+
+        findPath(root, p, pPath);
+        findPath(root, q, qPath);
+
+        while (pPath.size() > qPath.size())
+        {
+            pPath.pop();
+        }
+
+        while (pPath.size() < qPath.size())
+        {
+            qPath.pop();
+        }
+
+        while (pPath.top() != qPath.top())
+        {
+            pPath.pop();
+            qPath.pop();
+        }
+
+        return pPath.top();
+
+    }
+
 };
