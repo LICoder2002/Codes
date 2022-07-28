@@ -309,12 +309,19 @@ public:
 	{ 
 		cout << "ÂòÆ±-È«¼Û" << endl;
 	}
+	int num = 10;
 };
 class Student : public Person {
 public:
+	int num = 20;
 	virtual void BuyTicket() 
 	{ 
 		cout << "ÂòÆ±-°ë¼Û" << endl; 
+	}
+
+	void func()
+	{
+		cout << "func" << endl;
 	}
 };
 void Func(Person& p)
@@ -323,9 +330,15 @@ void Func(Person& p)
 }
 int main()
 {
-	Person Mike;
-	Func(Mike);
-	Student Johnson;
-	Func(Johnson);
+	//Person Mike;
+	//Func(Mike);
+	//Student Johnson;
+	//Func(Johnson);
+
+	Person* p = new Student();
+	p->BuyTicket();
+	cout << p->num << endl;
+	//p->func();
+
 	return 0;
 }
