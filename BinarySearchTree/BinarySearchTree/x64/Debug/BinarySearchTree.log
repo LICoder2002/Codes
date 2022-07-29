@@ -1,2 +1,74 @@
 ﻿  Test.cpp
-  BinarySearchTree.vcxproj -> D:\codes\Codes\BinarySearchTree\x64\Debug\BinarySearchTree.exe
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\utility(101,5): error C2678: 二进制“=”: 没有找到接受“_Ty”类型的左操作数的运算符(或没有可接受的转换)
+          with
+          [
+              _Ty=std::string
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3091,32): message : 可能是“std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3083,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3031,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(2962,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(2826,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept”
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\utility(99,1): message : 尝试匹配参数列表“(_Ty, const std::basic_string<char,std::char_traits<char>,std::allocator<char>>)”时
+          with
+          [
+              _Ty=std::string
+          ]
+D:\codes\Codes\BinarySearchTree\BinarySearchTree\BinarySearchTree.h(523): message : 查看对正在编译的函数 模板 实例化“void std::swap<const K,0>(_Ty &,_Ty &) noexcept(false)”的引用
+          with
+          [
+              K=std::string,
+              _Ty=std::string
+          ]
+D:\codes\Codes\BinarySearchTree\BinarySearchTree\BinarySearchTree.h(490): message : 在编译 类 模板 成员函数“bool key_value::BSTree<std::string,int>::_EraseR(key_value::BSTreeNode<K,V> *&,const K &)”时
+          with
+          [
+              K=std::string,
+              V=int
+          ]
+D:\codes\Codes\BinarySearchTree\BinarySearchTree\BinarySearchTree.h(485): message : 查看对正在编译的函数 模板 实例化“bool key_value::BSTree<std::string,int>::_EraseR(key_value::BSTreeNode<K,V> *&,const K &)”的引用
+          with
+          [
+              K=std::string,
+              V=int
+          ]
+D:\codes\Codes\BinarySearchTree\BinarySearchTree\BinarySearchTree.h(611): message : 查看对正在编译的 类 模板 实例化“key_value::BSTree<std::string,int>”的引用
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\utility(102,5): error C2678: 二进制“=”: 没有找到接受“_Ty”类型的左操作数的运算符(或没有可接受的转换)
+          with
+          [
+              _Ty=std::string
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3091,32): message : 可能是“std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3083,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(3031,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(2962,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)”
+          with
+          [
+              _Elem=char
+          ]
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(2826,32): message : 或    “std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept”
+D:\Microsoft Visual Studio2022\Community\VC\Tools\MSVC\14.32.31326\include\utility(99,1): message : 尝试匹配参数列表“(_Ty, const std::basic_string<char,std::char_traits<char>,std::allocator<char>>)”时
+          with
+          [
+              _Ty=std::string
+          ]

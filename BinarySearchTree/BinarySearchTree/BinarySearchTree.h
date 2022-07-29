@@ -623,6 +623,8 @@ namespace key_value
 		}
 
 		countTree.InOrder();
+
+		//countTree.EraseR("Æ»¹û");
 	}
 
 }
