@@ -1,2 +1,5 @@
-﻿  test.c
-  StackAndQueue.vcxproj -> D:\codes\code_c\StackAndQueue\x64\Debug\StackAndQueue.exe
+﻿  Queue.c
+  Stack.c
+  test.c
+  正在生成代码...
+  StackAndQueue.vcxproj -> D:\codes\Codes\StackAndQueue\x64\Debug\StackAndQueue.exe
