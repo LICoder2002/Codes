@@ -1,1 +1,2 @@
 D:\code\code_c\三子棋\x64\Debug\三子棋.exe
+D:\codes\Codes\三子棋\x64\Debug\三子棋.exe
