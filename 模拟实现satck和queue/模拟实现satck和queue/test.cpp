@@ -79,8 +79,8 @@ void test_priority_queue2()
 
 int main()
 {
-	//testStack();
-	//testQueue();
+	testStack();
+	testQueue();
 
 	test_priority_queue2();
 

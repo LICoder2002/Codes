@@ -1,33 +1,33 @@
 ﻿  test.cpp
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\queue.h(149,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\queue.h(146): message : 在编译 类 模板 成员函数“void lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::push(const T &)”时
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\queue.h(149,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\queue.h(146): message : 在编译 类 模板 成员函数“void lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::push(const T &)”时
           with
           [
               T=int
           ]
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\test.cpp(53): message : 查看对正在编译的函数 模板 实例化“void lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::push(const T &)”的引用
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\test.cpp(53): message : 查看对正在编译的函数 模板 实例化“void lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::push(const T &)”的引用
           with
           [
               T=int
           ]
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\test.cpp(51): message : 查看对正在编译的 类 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>”的引用
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\test.cpp(51): message : 查看对正在编译的 类 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>”的引用
           with
           [
               T=int
           ]
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\queue.h(139,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\test.cpp(70): message : 查看对正在编译的函数 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::priority_queue<int*>(InputIterator,InputIterator,const Compare &)”的引用
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\queue.h(139,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\test.cpp(70): message : 查看对正在编译的函数 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::priority_queue<int*>(InputIterator,InputIterator,const Compare &)”的引用
           with
           [
               T=int,
               InputIterator=int *,
               Compare=lhf::less<int>
           ]
-D:\codes\code_Cpp\模拟实现satck和queue\模拟实现satck和queue\test.cpp(70): message : 查看对正在编译的函数 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::priority_queue<int*>(InputIterator,InputIterator,const Compare &)”的引用
+D:\codes\Codes\模拟实现satck和queue\模拟实现satck和queue\test.cpp(70): message : 查看对正在编译的函数 模板 实例化“lhf::priority_queue<int,std::vector<int,std::allocator<T>>,lhf::less<T>>::priority_queue<int*>(InputIterator,InputIterator,const Compare &)”的引用
           with
           [
               T=int,
               InputIterator=int *,
               Compare=lhf::less<int>
           ]
-  模拟实现satck和queue.vcxproj -> D:\codes\code_Cpp\模拟实现satck和queue\x64\Debug\模拟实现satck和queue.exe
+  模拟实现satck和queue.vcxproj -> D:\codes\Codes\模拟实现satck和queue\x64\Debug\模拟实现satck和queue.exe
