@@ -1,1 +1,2 @@
 D:\code\code_c\汉诺塔\x64\Debug\汉诺塔.exe
+D:\codes\Codes\汉诺塔\x64\Debug\汉诺塔.exe
