@@ -1,7 +1,8 @@
 ﻿  SeqList.c
-D:\codes\code_c\SeqList\SeqList\SeqList.c(48,20): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\code_c\SeqList\SeqList\SeqList.c(126,10): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
-D:\codes\code_c\SeqList\SeqList\SeqList.c(126,10): message : 请考虑在格式字符串中使用“%zd”
+D:\codes\Codes\SeqList\SeqList\SeqList.c(48,20): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\SeqList\SeqList\SeqList.c(126,10): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\codes\Codes\SeqList\SeqList\SeqList.c(126,10): message : 请考虑在格式字符串中使用“%zd”
   test.c
   正在生成代码...
-  SeqList.vcxproj -> D:\codes\code_c\SeqList\x64\Debug\SeqList.exe
+LINK : warning LNK4076: 增量状态文件“x64\Debug\SeqList.ilk”无效(将删除)；正以非增量方式链接
+  SeqList.vcxproj -> D:\codes\Codes\SeqList\x64\Debug\SeqList.exe
