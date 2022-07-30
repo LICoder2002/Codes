@@ -1,2 +1,6 @@
-﻿  test.c
-  扫雷.vcxproj -> D:\code\code_c\扫雷\x64\Debug\扫雷.exe
+﻿  game.c
+D:\codes\Codes\扫雷\game.c(148,3): warning C4033: “Flagmine”必须返回值
+  test.c
+  正在生成代码...
+D:\codes\Codes\扫雷\game.c(172): warning C4715: “Flagmine”: 不是所有的控件路径都返回值
+  扫雷.vcxproj -> D:\codes\Codes\扫雷\x64\Debug\扫雷.exe
