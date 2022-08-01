@@ -1,0 +1,12 @@
+﻿  Test.cpp
+D:\codes\Codes\AVLTree\AVLTree\Test.cpp(23,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\codes\Codes\AVLTree\AVLTree\Test.cpp(27,16): warning C4267: “参数”: 从“size_t”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=int
+          ]
+D:\codes\Codes\AVLTree\AVLTree\AVLTree.h(174,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\AVLTree\AVLTree\AVLTree.h(142): message : 在编译 类 模板 成员函数“std::vector<std::vector<int,std::allocator<int>>,std::allocator<std::vector<int,std::allocator<int>>>> AVLTree<int,int>::levelOrder(void)”时
+D:\codes\Codes\AVLTree\AVLTree\Test.cpp(15): message : 查看对正在编译的函数 模板 实例化“std::vector<std::vector<int,std::allocator<int>>,std::allocator<std::vector<int,std::allocator<int>>>> AVLTree<int,int>::levelOrder(void)”的引用
+D:\codes\Codes\AVLTree\AVLTree\Test.cpp(10): message : 查看对正在编译的 类 模板 实例化“AVLTree<int,int>”的引用
+  AVLTree.vcxproj -> D:\codes\Codes\AVLTree\x64\Debug\AVLTree.exe
