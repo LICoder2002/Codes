@@ -8,13 +8,13 @@ template<class K, class V>
 struct AVLTreeNode
 {
 	pair<K, V> _kv;
-	AVLTreeNode<K, V>* _left;
-	AVLTreeNode<K, V>* _right;
-	AVLTreeNode<K, V>* _parent;
+	AVLTreeNode<K, V>* _left; //该节点的左孩子
+	AVLTreeNode<K, V>* _right;  //该节点的右孩子
+	AVLTreeNode<K, V>* _parent;  //该节点的双亲
 
-	int _bf;
+	int _bf; //平衡因子
 
-	AVLTreeNode(const pair<K,V>& kv)
+	AVLTreeNode(const pair<K,V>& kv) //构造函数
 		:_kv(kv)
 		,_left(nullptr)
 		,_right(nullptr)
@@ -62,7 +62,7 @@ public:
 
 		//找到了插入位置
 		cur = new Node(kv);
-		if (parent->_kv.first > kv.first)
+		if (parent->_kv.first < kv.first)
 		{
 			parent->_right = cur;
 		}
@@ -76,7 +76,7 @@ public:
 
 		while (parent) //最远更新到parent
 		{
-			if (cur = parent->_left)
+			if (cur == parent->_right)
 			{
 				parent->_bf++;
 			}
@@ -189,28 +189,27 @@ private:
 		if (nullptr == root)
 			return true;
 
-		// 计算pRoot节点的平衡因子：即pRoot左右子树的高度差
+		// 计算root节点的平衡因子：即root左右子树的高度差
 		int leftHeight = _Height(root->_left);
 		int rightHeight = _Height(root->_right);
 		int diff = rightHeight - leftHeight;
 
-		// 如果计算出的平衡因子与pRoot的平衡因子不相等，或者
-		// pRoot平衡因子的绝对值超过1，则一定不是AVL树
-		if (abs(diff) >= 2)
+		// 如果计算出的平衡因子与root的平衡因子不相等，或者
+		// root平衡因子的绝对值超过1，则一定不是AVL树
+		if (abs(diff) >= 2) // 每个节点子树高度差的绝对值不超过1
 		{
 			cout << root->_kv.first << "节点平衡因子异常" << endl;
 			return false;
 		}
 
-		if (diff != root->_bf)
+		if (diff != root->_bf) // 节点的平衡因子是否计算正确
 		{
 			cout << root->_kv.first << "节点平衡因子不符合实际" << endl;
 			return false;
 		}
 
-		// pRoot的左和右如果都是AVL树，则该树一定是AVL树
-		return _IsBalanceTree(root->_left)
-			&& _IsBalanceTree(root->_right);
+		// root的左和右如果都是AVL树，则该树一定是AVL树
+		return _IsBalanceTree(root->_left) && _IsBalanceTree(root->_right);
 	}
 
 
@@ -263,10 +262,9 @@ private:
 			{
 				grandParent->_right = subR;
 			}
+			subR->_parent = grandParent;
 		}
-
-		subR->_bf = parent->_bf = 0;
-
+		subR->_bf = parent->_bf = 0; //更新平衡因子
 	}
 
 	void RotateR(Node* parent)
@@ -297,6 +295,7 @@ private:
 			{
 				grandParent->_right = subL;
 			}
+			subL->_parent = grandParent;
 		}
 
 		subL->_bf = parent->_bf = 0;

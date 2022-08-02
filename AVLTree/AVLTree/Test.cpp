@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<time.h>
 #include"AVLTree.h"
 using namespace std;
 
@@ -17,10 +17,10 @@ void TestAVLTree1()
 
 void TestAVLTree2()
 {
-	const size_t N = 1024 * 1024 * 10;
+	const size_t N = 144  ;
 	vector<int> v;
 	v.reserve(N);
-	srand(time(0));
+	srand((unsigned int)time(nullptr));
 	for (size_t i = 0; i < N; ++i)
 	{
 		//v.push_back(rand());
@@ -39,13 +39,16 @@ void TestAVLTree2()
 	cout << "¸ß¶È:" << t.Height() << endl;
 
 
-	//t.InOrder();
+	t.InOrder();
 }
 
 
 int main()
 {
 	TestAVLTree1();
+	cout << "=======================" << endl;
+	TestAVLTree2();
+
 
 	return 0;
 }

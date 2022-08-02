@@ -1,5 +1,4 @@
 ﻿  Test.cpp
-D:\codes\Codes\AVLTree\AVLTree\Test.cpp(23,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
 D:\codes\Codes\AVLTree\AVLTree\Test.cpp(27,16): warning C4267: “参数”: 从“size_t”转换到“_Ty”，可能丢失数据
           with
           [
