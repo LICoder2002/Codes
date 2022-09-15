@@ -174,15 +174,41 @@ namespace Hash
 			_n = 0;
 		}
 
-		bool Insert(const T& data)
+		size_t GetNextPrime(size_t prime)
+		{
+			const int PRIMECOUNT = 28;
+			static const size_t primeList[PRIMECOUNT] =
+			{
+				53ul, 97ul, 193ul, 389ul, 769ul,
+				1543ul, 3079ul, 6151ul, 12289ul, 24593ul,
+				49157ul, 98317ul, 196613ul, 393241ul, 786433ul,
+				1572869ul, 3145739ul, 6291469ul, 12582917ul, 25165843ul,
+				50331653ul, 100663319ul, 201326611ul, 402653189ul, 805306457ul,
+				1610612741ul, 3221225473ul, 4294967291ul
+			};
+
+			// 获取比prime大那一个素数
+			size_t i = 0;
+			for (; i < PRIMECOUNT; ++i)
+			{
+				if (primeList[i] > prime)
+					return primeList[i];
+			}
+
+			return primeList[i];
+		}
+
+		pair<iterator, bool> Insert(const T& data)
 		{
 			HashFunc hf{};
 			KeyOfT kot{};
 
+			iterator pos = Find(kot(data));
+
 			//kv已经存在
-			if (Find(kot(data)))
+			if (pos != end())
 			{
-				return false;
+				return make_pair(pos, false);
 			}
 
 
@@ -207,27 +233,32 @@ namespace Hash
 				newHT._tables.swap(_tables);*/
 
 				//法二，不销毁原节点
-				size_t newSize = _tables.size() == 0 ? 10 : _tables.size() * 2;
-				vector<Node*> newTables;
-				newTables.resize(newSize, nullptr);
+				//size_t newSize = _tables.size() == 0 ? 10 : _tables.size() * 2;
 
-				for (size_t i = 0; i < _tables.size(); ++i)
+				size_t newSize = GetNextPrime(_tables.size());
+				if (newSize != _tables.size())
 				{
-					Node* cur = _tables[i];
+					vector<Node*> newTables;
+					newTables.resize(newSize, nullptr);
 
-					while (cur)
+					for (size_t i = 0; i < _tables.size(); ++i)
 					{
-						Node* next = cur->_next;
+						Node* cur = _tables[i];
 
-						size_t hashi = hf(kot(cur->_data)) % newSize;
-						cur->_next = newTables[hashi];
-						newTables[hashi] = cur;
+						while (cur)
+						{
+							Node* next = cur->_next;
 
-						cur = next;
+							size_t hashi = hf(kot(cur->_data)) % newSize;
+							cur->_next = newTables[hashi];
+							newTables[hashi] = cur;
+
+							cur = next;
+						}
+						_tables[i] = nullptr;
 					}
-					_tables[i] = nullptr;
+					newTables.swap(_tables);
 				}
-				newTables.swap(_tables);
 			}
 
 			size_t hashi = hf(kot(data));
@@ -239,15 +270,15 @@ namespace Hash
 			_tables[hashi] = newnode;
 
 			++_n;
-			return true;
+			return make_pair(iterator(newnode, this), true);
 		}
 
-		Node* Find(const K& key)
+		iterator Find(const K& key)
 		{
 			//表为空
 			if (_tables.size() == 0)
 			{
-				return nullptr;
+				return iterator(nullptr, this);
 			}
 
 			HashFunc hf{};
@@ -259,11 +290,11 @@ namespace Hash
 			{
 				if (kot(cur->_data) == key)
 				{
-					return cur;
+					return iterator(cur, this);
 				}
 				cur = cur->_next;
 			}
-			return nullptr;
+				return iterator(nullptr, this);
 		}
 
 		bool Erase(const K& key)

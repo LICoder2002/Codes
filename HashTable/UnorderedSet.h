@@ -20,7 +20,7 @@ namespace lhf
 		typedef typename Hash::HashTable < K, K, SetKeyOfT, HashFunc>::iterator iterator;
 
 
-		bool insert(const K& key)
+		pair<iterator, bool> insert(const K& key)
 		{
 			return _ht.Insert(key);
 		}
@@ -35,6 +35,15 @@ namespace lhf
 			return _ht.end();
 		}
 
+		iterator find(const K& key)
+		{
+			return _ht.Find(key);
+		}
+
+		bool erase(const K& key)
+		{
+			return _ht.Erase(key);
+		}
 	private:
 		Hash::HashTable<K, K, SetKeyOfT, HashFunc> _ht;
 	};
