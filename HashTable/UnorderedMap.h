@@ -16,7 +16,7 @@ namespace lhf
 
 	public:
 
-		typedef typename Hash::HashTable < K, V, MapKeyOfT, HashFunc>::iterator iterator;
+		typedef typename Hash::HashTable < K, pair<K, V>, MapKeyOfT, HashFunc>::iterator iterator;
 
 		iterator begin()
 		{
@@ -51,6 +51,6 @@ namespace lhf
 		}
 
 	private:
-		Hash::HashTable<K, V, MapKeyOfT, HashFunc> _ht;
+		Hash::HashTable<K, pair<K, V>, MapKeyOfT, HashFunc> _ht;
 	};
 }
