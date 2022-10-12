@@ -31,11 +31,13 @@ void TestHeap()
 	HP hp;
 	HeapInit(&hp);
 	HeapPush(&hp, 1);
-	HeapPush(&hp, 5);
-	HeapPush(&hp, 0);
 	HeapPush(&hp, 8);
+	HeapPush(&hp, 6);
+	HeapPush(&hp, 2);
+	HeapPush(&hp, 5);
+	HeapPush(&hp, 4);
+	HeapPush(&hp, 7);
 	HeapPush(&hp, 3);
-	HeapPush(&hp, 9);
 	HeapPrint(&hp);
 
 	HeapPop(&hp);
@@ -173,7 +175,7 @@ void TestTopk()
 
 int main()
 {
-	TestTopk();
+	TestHeap();
 
 	return 0;
 }

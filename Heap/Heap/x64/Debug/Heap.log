@@ -1,5 +1,5 @@
 ﻿  Heap.c
   Test.c
-D:\codes\Codes\Heap\Heap\Test.c(156,8): warning C4013: “time”未定义；假设外部返回 int
+D:\codes\Codes\Heap\Heap\Test.c(158,8): warning C4013: “time”未定义；假设外部返回 int
   正在生成代码...
   Heap.vcxproj -> D:\codes\Codes\Heap\x64\Debug\Heap.exe
