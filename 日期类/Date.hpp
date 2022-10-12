@@ -26,7 +26,7 @@ public:
 	// 全缺省的构造函数
 	Date(int year = 1, int month = 1, int day = 1)
 	{
-		if (year >= 1 && month <= 12 && month >= 1 && day >= 1 && day <= GetMonthDay(year, month))
+		if (year >= 1 && _month <= 12 && month >= 1 && day >= 1 && day <= GetMonthDay(year, month))
 		{
 			_year = year;
 			_month = month;
