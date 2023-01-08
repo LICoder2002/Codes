@@ -1,0 +1,4 @@
+﻿  test.cpp
+D:\codes\Codes\BFS\maze.h(19,24): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\maze.h(20,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  BFS.vcxproj -> D:\codes\Codes\BFS\x64\Debug\BFS.exe
