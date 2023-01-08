@@ -1,8 +1,9 @@
 #include "maze.h"
-
+#include "BFSOJ.h"
 int main()
 {
-	test();
-
+	//test();
+	Solution2 s;
+	s.test();
 	return 0;
 }

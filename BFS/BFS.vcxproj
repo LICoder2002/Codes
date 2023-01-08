@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BFSOJ.h" />
     <ClInclude Include="maze.h" />
   </ItemGroup>
   <ItemGroup>
