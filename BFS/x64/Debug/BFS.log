@@ -1,8 +1,11 @@
 ﻿  test.cpp
 D:\codes\Codes\BFS\maze.h(19,24): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 D:\codes\Codes\BFS\maze.h(20,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\Codes\BFS\BFSOJ.h(37,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\Codes\BFS\BFSOJ.h(61,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(38,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 D:\codes\Codes\BFS\BFSOJ.h(62,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\codes\Codes\BFS\BFSOJ.h(81,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(63,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(82,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(145,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(194,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\codes\Codes\BFS\BFSOJ.h(240,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   BFS.vcxproj -> D:\codes\Codes\BFS\x64\Debug\BFS.exe
