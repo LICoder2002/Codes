@@ -65,8 +65,8 @@ void ShellSort(int* a, int n)
 				{
 					break;
 				}
-				a[end + gap] = temp;
 			}
+			a[end + gap] = temp;
 		}
 	}
 

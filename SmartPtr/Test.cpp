@@ -56,32 +56,32 @@ using namespace std;
 // return 0;
 //}
 
-//struct ListNode
-//{
-//	int _data;
-//	shared_ptr<ListNode> _prev;
-//	shared_ptr<ListNode> _next;
-//	~ListNode() 
-//	{
-//		cout << "~ListNode()" << endl;
-//	}
-//};
-//int main()
-//{
-//	shared_ptr<ListNode> node1(new ListNode);
-//	shared_ptr<ListNode> node2(new ListNode);
-//
-//	cout << node1.use_count() << endl;
-//	cout << node2.use_count() << endl;
-//
-//	node1->_next = node2;
-//	node2->_prev = node1;
-//	cout << node1.use_count() << endl;
-//	cout << node2.use_count() << endl;
-//	return 0;
-//}
+struct ListNode
+{
+	int _data;
+	shared_ptr<ListNode> _prev;
+	shared_ptr<ListNode> _next;
+	~ListNode() 
+	{
+		cout << "~ListNode()" << endl;
+	}
+};
+int main()
+{
+	shared_ptr<ListNode> node1(new ListNode);
+	shared_ptr<ListNode> node2(new ListNode);
 
-//
+	cout << node1.use_count() << endl;
+	cout << node2.use_count() << endl;
+
+	node1->_next = node2;
+	node2->_prev = node1;
+	cout << node1.use_count() << endl;
+	cout << node2.use_count() << endl;
+	return 0;
+}
+
+
 //struct ListNode
 //{
 //	/*ListNode* _next = nullptr;
@@ -99,7 +99,7 @@ using namespace std;
 //		cout << "~ListNode()" << endl;
 //	}
 //};
-//
+////
 //int main()
 //{
 //	std::shared_ptr<ListNode> node1(new ListNode);
@@ -145,7 +145,7 @@ using namespace std;
 //	return 0;
 //}
 
-#include <memory>
+//#include <memory>
 
 //int main()
 //{
@@ -181,7 +181,7 @@ using namespace std;
 //	return 0;
 //}
 
-
+/*
 
 int main()
 {
@@ -224,3 +224,4 @@ int main()
 
 	return 0;
 }
+*/

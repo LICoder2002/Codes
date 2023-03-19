@@ -1,1 +1,7 @@
-﻿  排序算法.vcxproj -> D:\codes\code_c\排序算法\x64\Debug\排序算法.exe
+﻿  sort.c
+  Stack.c
+  test.c
+D:\codes\Codes\排序算法\排序算法\test.c(98,8): warning C4013: “time”未定义；假设外部返回 int
+D:\codes\Codes\排序算法\排序算法\test.c(123,15): warning C4013: “clock”未定义；假设外部返回 int
+  正在生成代码...
+  排序算法.vcxproj -> D:\codes\Codes\排序算法\x64\Debug\排序算法.exe
